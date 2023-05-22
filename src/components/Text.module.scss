@@ -1,0 +1,79 @@
+@import '../styles/accessibility.scss';
+
+.root {
+  margin: 0;
+  text-align: inherit;
+}
+
+.block {
+  display: block;
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.visuallyHidden {
+  @include visually-hidden;
+}
+
+.start {
+  text-align: start;
+}
+
+.center {
+  text-align: center;
+}
+
+.end {
+  text-align: end;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.success {
+  color: var(--color-text-success);
+}
+
+.critical {
+  color: var(--color-text-critical);
+}
+
+.warning {
+  color: var(--color-text-caution);
+}
+
+.subdued {
+  color: var(--color-text-subdued);
+}
+
+.text-inverse {
+  color: var(--color-text-inverse);
+}
+
+// font-weight must be below variant styles so
+// it can override the styles when necessary.
+.regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.break {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}

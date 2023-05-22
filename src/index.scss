@@ -1,12 +1,7 @@
+@import './styles/tokens.scss';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,15 +9,26 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+body,
+#root {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
   min-height: 100vh;
-  font-size: 16px;
+  font-size: 12px;
+
+  @media screen and (min-width: 375px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 640px) {
+    font-size: 16px;
+  }
 }
 
-h1 {
-  font-size: 2rem;
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
