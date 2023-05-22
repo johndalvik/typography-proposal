@@ -4,6 +4,7 @@ function App() {
   return (
     <>
       <Text>Hello</Text>
+      <Text fontWeight="bold">bold</Text>
     </>
   );
 }
