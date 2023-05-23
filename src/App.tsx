@@ -5,6 +5,9 @@ function App() {
     <section>
       <Text>Hello</Text>
       <Text fontWeight="bold">bold</Text>
+      <Text size="400" fontWeight="bold">
+        Bigger bold
+      </Text>
     </section>
   );
 }

@@ -9,6 +9,23 @@ type FontWeight = 'regular' | 'medium' | 'semibold' | 'bold';
 
 type Color = 'success' | 'critical' | 'warning' | 'subdued' | 'text-inverse';
 
+type Size =
+  | '100'
+  | '200'
+  | '300'
+  | '400'
+  | '500'
+  | '600'
+  | '700'
+  | '800'
+  | '900'
+  | '1000'
+  | '1100'
+  | '1200'
+  | '1300'
+  | '1400'
+  | '1500';
+
 export interface TextProps {
   /** Adjust horizontal alignment of text */
   alignment?: Alignment;
@@ -24,6 +41,8 @@ export interface TextProps {
   fontWeight?: FontWeight;
   /** HTML id attribute */
   id?: string;
+  /** Typographic size of text */
+  size?: Size;
   /** Truncate text overflow with ellipsis */
   truncate?: boolean;
   /** Typographic style of text */
@@ -40,6 +59,7 @@ export const Text = ({
   color,
   fontWeight,
   id,
+  size = '300',
   truncate = false,
   variant,
   visuallyHidden = false,
@@ -55,11 +75,16 @@ export const Text = ({
     breakWord && styles.break,
     color && styles[color],
     truncate && styles.truncate,
-    visuallyHidden && styles.visuallyHidden
+    visuallyHidden && styles.visuallyHidden,
+    size && styles[`font-size-${size}`]
   );
 
   return (
-    <Component id={id} className={className}>
+    <Component
+      id={id}
+      className={className}
+      style={{ fontSize: `var(--font-size-${size})` }}
+    >
       {children}
     </Component>
   );
