@@ -20,15 +20,7 @@ body,
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-size: 12px;
-
-  @media screen and (min-width: 375px) {
-    font-size: 14px;
-  }
-
-  @media screen and (min-width: 640px) {
-    font-size: 16px;
-  }
+  font-size: 16px;
 }
 
 section {
