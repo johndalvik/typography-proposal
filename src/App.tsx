@@ -1,4 +1,5 @@
-import { Text } from './components/Text';
+import { Text } from './components/Text/Text';
+import { Header } from './components/Header/Header';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Text size="400" fontWeight="bold">
         Bigger bold
       </Text>
+      <Header variant="h1">I'm a title</Header>
     </section>
   );
 }

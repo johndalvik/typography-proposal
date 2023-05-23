@@ -30,11 +30,13 @@ export interface TextProps {
   /** Adjust horizontal alignment of text */
   alignment?: Alignment;
   /** The element type */
-  as?: ReactElement;
+  as?: string | ReactElement;
   /** Prevent text from overflowing */
   breakWord?: boolean;
   /** Text to display */
   children: ReactNode;
+  /** Additional classname */
+  className?: string;
   /** Adjust color of text */
   color?: Color;
   /** Adjust weight of text */
@@ -45,8 +47,6 @@ export interface TextProps {
   size?: Size;
   /** Truncate text overflow with ellipsis */
   truncate?: boolean;
-  /** Typographic style of text */
-  variant?: string;
   /** Visually hide the text */
   visuallyHidden?: boolean;
 }
@@ -56,19 +56,18 @@ export const Text = ({
   as,
   breakWord,
   children,
+  className,
   color,
   fontWeight,
   id,
   size = '300',
   truncate = false,
-  variant,
   visuallyHidden = false,
 }: TextProps) => {
   const Component = as || 'p';
 
-  const className = classNames(
+  const classes = classNames(
     styles.root,
-    variant && styles[variant],
     fontWeight && styles[fontWeight],
     (alignment || truncate) && styles.block,
     alignment && styles[alignment],
@@ -76,15 +75,12 @@ export const Text = ({
     color && styles[color],
     truncate && styles.truncate,
     visuallyHidden && styles.visuallyHidden,
-    size && styles[`font-size-${size}`]
+    size && styles[`font-size-${size}`],
+    className
   );
 
   return (
-    <Component
-      id={id}
-      className={className}
-      style={{ fontSize: `var(--font-size-${size})` }}
-    >
+    <Component id={id} className={classes}>
       {children}
     </Component>
   );

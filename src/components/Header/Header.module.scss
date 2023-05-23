@@ -1,0 +1,9 @@
+.h1 {
+  font-size: var(--font-size-600);
+  margin: 20px; // $rebranded-spacing-scale
+
+  @media screen and (min-width: 768px) {
+    font-size: var(--font-size-1000);
+    margin: 32px; // $rebranded-spacing-scale
+  }
+}
