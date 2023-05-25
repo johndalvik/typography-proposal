@@ -1,5 +1,5 @@
-import { Text } from './components/Text/Text';
-import { Header } from './components/Header/Header';
+import { Text } from './typography/Text/Text';
+import { Header } from './typography/Header/Header';
 
 function App() {
   return (
