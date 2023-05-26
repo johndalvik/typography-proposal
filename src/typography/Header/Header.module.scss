@@ -1,13 +1,15 @@
 .h1 {
-  font-size: var(--font-size-600);
-  margin: 20px; // $rebranded-spacing-scale
-
-  @media screen and (min-width: 768px) {
-    font-size: var(--font-size-1000);
-    margin: 32px; // $rebranded-spacing-scale
-  }
-
-  // etc...
+  font-size: var(--font-size-700);
+  max-width: 22ch;
 }
-
-// h2, h3, h4, h5, h6 etc...
+.h2 {
+  font-size: var(--font-size-600);
+  max-width: 30ch;
+}
+.h3 {
+  font-size: var(--font-size-500);
+  max-width: 40ch;
+}
+.h4 {
+  font-size: var(--font-size-400);
+}
