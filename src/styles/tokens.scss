@@ -8,14 +8,13 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 800;
-  --font-size-100: clamp(0.51rem, -0.02vw + 0.52rem, 0.5rem);
-  --font-size-200: clamp(0.64rem, 0.04vw + 0.63rem, 0.67rem);
-  --font-size-300: clamp(0.8rem, 0.14vw + 0.77rem, 0.89rem);
-  --font-size-400: clamp(1rem, 0.29vw + 0.93rem, 1.19rem);
-  --font-size-500: clamp(1.25rem, 0.51vw + 1.12rem, 1.58rem);
-  --font-size-600: clamp(1.56rem, 0.84vw + 1.35rem, 2.11rem);
-  --font-size-700: clamp(1.95rem, 1.32vw + 1.62rem, 2.81rem);
-  --font-size-800: clamp(2.44rem, 2.01vw + 1.94rem, 3.75rem);
-  --font-size-900: clamp(3.05rem, 2.99vw + 2.3rem, 5rem);
-  --font-size-1000: clamp(3.81rem, 4.38vw + 2.72rem, 6.66rem);
+
+  --type-ratio: 1.33;
+
+  --body-font-size: 1rem;
+
+  --font-size-4: calc(var(--body-font-size) * var(--type-ratio));
+  --font-size-3: calc(var(--font-size-4) * var(--type-ratio));
+  --font-size-2: calc(var(--font-size-3) * var(--type-ratio));
+  --font-size-1: calc(var(--font-size-2) * var(--type-ratio));
 }
